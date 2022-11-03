@@ -110,8 +110,8 @@ html {
 
 .informacoes {
     display: grid;
-    grid-template-columns: repeat(3, 20vw);
-    grid-template-rows: 20vw;
+    grid-template-columns: repeat(3, 18vw);
+    grid-template-rows: 18vw;
     column-gap: 3vw;
     justify-content: center;
 }
