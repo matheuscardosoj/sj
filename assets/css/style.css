@@ -54,7 +54,7 @@ html {
 }
 
 .beneficios {
-    padding: 9rem 3rem 12rem 3rem;
+    padding: 5rem;
     position: relative;
     background-image: url(../imagens/fundo.jpg);
     background-position: center center;
@@ -120,12 +120,20 @@ html {
     background: white;
     display: flex;
     flex-direction: column;
+    height: 250px;
+    width: 250px;
     padding: 3rem;
+    margin: 1rem;
     border: 0.3rem solid #000000;
     border-radius: 1rem;
-    vertical-align: top;
     transition: 700ms;
     box-shadow: 10px 10px 10px #000000;
+    box-sizing: border-box;
+}
+
+.cartao:hover {
+    transform: scale(1.05);
+    border-color: #1C75BE;
 }
 
 .cartao__imagem {
@@ -148,10 +156,7 @@ html {
     text-align: center;
 }
 
-.cartao:hover {
-    transform: scale(1.05);
-    border-color: #1C75BE;
-}
+
 
 @media screen and (max-width: 768px) {
     .informacoes {
