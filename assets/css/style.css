@@ -110,9 +110,9 @@ html {
 
 .informacoes {
     display: grid;
-    grid-template-columns: repeat(3, 250px);
-    grid-template-rows: 1fr;
-    column-gap: 40px;
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: 20vw;
+    column-gap: 3vw;
     justify-content: center;
 }
 
@@ -120,10 +120,8 @@ html {
     background: white;
     display: flex;
     flex-direction: column;
-    height: 250px;
-    width: 250px;
     padding: 3rem;
-    margin: 1rem;
+    margin: 1rem 0;
     border: 0.3rem solid #000000;
     border-radius: 1rem;
     transition: 700ms;
@@ -156,11 +154,9 @@ html {
     text-align: center;
 }
 
-
-
 @media screen and (max-width: 768px) {
     .informacoes {
-        grid-template-columns: 50%;
+        grid-template-columns: 90%;
         gap: 40px;
     }
 }
