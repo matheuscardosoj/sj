@@ -270,10 +270,20 @@ html {
 }
 
 @media screen and (max-width: 768px) {
-   .rodape {
+   .caixa__rodape {
         grid-template-columns: auto;
         grid-template-rows: auto auto;
+        text-align: center;
         gap: 20px;
+   }
+
+   .mapa {
+    justify-self: center;
+   }
+
+   .conteudo {
+    grid-template-columns: auto;
+    padding: 3rem;
    }
 }
 
