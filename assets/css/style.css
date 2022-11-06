@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 :root {
-    --cor-cabecalho: #868686;
+    --cor-cabecalho: #BBBBBB;
     --cor-cartao: #1C75BE;
     --titulo-primario: 4rem;
     --titulo-secundario: 2.5rem;
@@ -55,7 +55,7 @@ html {
     color: var(--cor-cartao);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 940px) {
     .cabecalho {
         padding: 2rem 0;
     }
@@ -81,25 +81,98 @@ html {
     }
 }
 
-.beneficios {
-    padding: 5rem 0;
-    background-image: url(../imagens/fundo.jpg);
-    background-position: center center;
-    background-size: cover;
+.rodape {
+    padding: 30px 0;
+    background-color: var(--cor-cabecalho);
 }
 
-.caixa__beneficios {
+.caixa__rodape {
     margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mapa {
+    width: 100%;
+    height: 300px;
+}
+
+.conteudo {
+    display: grid;
+    row-gap: 30px;
+    grid-template-columns: 400px;
+}
+
+.conteudo__info {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.conteudo__titulo {
+    font-size: var(--titulo-terciario);
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+.conteudo__paragrafo {
+    font-size: var(--paragrafo);
+    text-align: justify;
+}
+
+@media screen and (max-width: 940px) {
+    .caixa__rodape {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        text-align: center;
+        gap: 20px;
+        box-sizing: border-box;
+    }
+
+    .mapa {
+        
+        width: 100%;
+        height: 300px;
+        padding: 0 3rem;
+        box-sizing: border-box;
+    }
+
+    .conteudo {
+        width: 100%;
+        grid-template-columns: auto;
+        padding: 3rem;
+        box-sizing: border-box;
+    }
+
+    .conteudo__info p{
+        justify-self: center;
+    }
+
+    .conteudo__info p {
+        text-align: center;
+    }
+}
+
+/*Pagina principal*/
+
+.orcamento {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+    background-image: url(../imagens/fundo.jpg);
+    background-size: 100% 100%;
+    height: 400px;
+}
+
+.caixa__orcamento {
+    row-gap: 3rem;
     text-align: center;
 }
 
-.orcamento {
-    display: block;
-}
-
 .orcamento__titulo{
-    padding: 2.5rem;
     color: white;
     font-size: var(--titulo-secundario);
     font-weight: 700;
@@ -112,7 +185,6 @@ html {
 }
 
 .orcamento__whatsapp {
-    margin: 3rem;
     transition: 1s transform;
 }
 
@@ -138,12 +210,78 @@ html {
     top: 0.45rem;
 }
 
-.informacoes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    column-gap: 3vw;
+@media screen and (max-width:940px) {
+    .orcamento {
+        height: 200px;
+    }
+
+    .caixa__orcamento {
+        padding: 3rem;
+        box-sizing: border-box;
+    }
+}
+
+.sobre {
+    display: flex;
     justify-content: center;
+}
+
+.sobre strong {
+    font-weight: 700;
+}
+
+.sobre em {
+    font-style: italic;
+}
+
+.caixa__sobre {
+    row-gap: 3rem;
+    padding: 5rem 0;
+}
+
+.sobre__titulo {
+    font-size: var(--titulo-secundario);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+}
+
+.sobre__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5em;
+}
+
+.sobre__paragrafo {
+    font-size: var(--paragrafo);
+    text-align: justify;
+}
+
+.titulo__beneficios {
+    text-align: center;
+    font-size: var(--titulo-secundario);
+    font-weight: 700;
+    text-transform: uppercase;
+    grid-column: 1 / span 3;
+}
+
+@media screen and (max-width: 940px) {
+    .sobre__info {
+        padding: 3rem;
+    }
+}
+
+.beneficios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa__beneficios {
+    row-gap: 3rem;
+    column-gap: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 5rem;
 }
 
 .cartao {
@@ -180,16 +318,87 @@ html {
 .cartao__paragrafo {
     padding-top: 1rem;
     font-size: var(--paragrafo);
+    text-align: justify;
 }
 
-@media screen and (max-width: 768px) {
-    .beneficios {
-        padding: 3rem;
+@media screen and (max-width: 940px) {
+    .caixa__beneficios {
+        width: 100%;
+        grid-template-columns: 1fr;
+        margin: 0 3rem;
+        margin-bottom: 5rem;
     }
 
-    .informacoes {
-        grid-template-columns: 250px;
-        gap: 40px;
+    .titulo__beneficios {
+        grid-column: auto;
+    }
+
+    .cartao {
+        justify-self: center;
+        width: 100%;
+        margin: 0 3rem;
+        box-sizing: border-box;
+    }
+}
+
+/*Pagina de servicos*/
+
+.servicos {
+    padding: 5rem 0 1.5rem;
+}
+
+.caixa__servicos {
+    margin: 0 auto;
+}
+
+.servicos__titulo {
+    grid-column: 1 / span 3;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: var(--titulo-secundario);
+    font-weight: 700;
+    padding-bottom: 2rem;
+}
+
+.caixa__cartao-servicos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 2rem;
+    column-gap: 3rem;
+}
+
+.cartao__servicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cartao__servicos h3 {
+    justify-self: center;
+    font-weight: 700;
+    font-size: var(--titulo-terciario);
+}
+
+.cartao__servicos img {
+    justify-self: center;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.cartao__servicos p {
+    text-align: justify;
+    font-size: var(--paragrafo);
+}
+
+@media screen and (max-width: 940px) {
+    .caixa__cartao-servicos {
+        grid-template-columns: 70%;
+        grid-template-rows: auto;
+        gap: 30px;
+        justify-content: center;
     }
 }
 
@@ -224,127 +433,9 @@ html {
     transform: scale(1.05);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 940px) {
     .clientes {
         display: none;
-    }
-}
-
-.rodape {
-    padding: 30px 0;
-    background-color: var(--cor-cabecalho);
-}
-
-.caixa__rodape {
-    margin: 0 auto;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.mapa {
-    width: 300px;
-    height: 300px;
-}
-
-.conteudo {
-    display: grid;
-    row-gap: 30px;
-    grid-template-columns: 400px;
-}
-
-.conteudo__info {
-    display: grid;
-    gap: 0.5rem;
-}
-
-.conteudo__titulo {
-    font-size: var(--titulo-terciario);
-    font-weight: 700;
-    padding-bottom: 5px;
-}
-
-.conteudo__paragrafo {
-    font-size: var(--paragrafo);
-    text-align: justify;
-}
-
-@media screen and (max-width: 768px) {
-   .caixa__rodape {
-        grid-template-columns: auto;
-        grid-template-rows: auto auto;
-        text-align: center;
-        gap: 20px;
-   }
-
-   .mapa {
-    justify-self: center;
-   }
-
-   .conteudo {
-    grid-template-columns: auto;
-    padding: 3rem;
-   }
-}
-
-/*Pagina de servicos*/
-
-.servicos {
-    padding: 5rem 0 1.5rem;
-}
-
-.caixa__servicos {
-    margin: 0 auto;
-}
-
-.servicos__titulo {
-    grid-column: 1 / span 3;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: var(--titulo-secundario);
-    font-weight: 700;
-    padding-bottom: 2rem;
-}
-
-.caixa__cartao {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    row-gap: 2rem;
-    column-gap: 3rem;
-}
-
-.cartao__servicos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
-
-.cartao__servicos h3 {
-    justify-self: center;
-    font-weight: 700;
-    font-size: var(--titulo-terciario);
-}
-
-.cartao__servicos img {
-    justify-self: center;
-    width: 100%;
-    height: 300px;
-    border-radius: 10px;
-}
-
-.cartao__servicos p {
-    text-align: justify;
-    font-size: var(--paragrafo);
-}
-
-@media screen and (max-width: 768px) {
-    .caixa__cartao {
-        grid-template-columns: 70%;
-        grid-template-rows: auto;
-        gap: 30px;
-        justify-content: center;
     }
 }
 
@@ -360,6 +451,7 @@ html {
     font-size: var(--titulo-secundario);
     font-weight: 700;
     margin-bottom: 3rem;
+    text-transform: uppercase;
 }
 
 .formulario__label {
@@ -399,7 +491,7 @@ html {
     
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 940px){
 
     .caixa__formulario {
         box-sizing: border-box;
