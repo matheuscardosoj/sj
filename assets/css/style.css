@@ -346,11 +346,9 @@ html {
 /*Pagina de servicos*/
 
 .servicos {
-    padding: 5rem 0 1.5rem;
-}
-
-.caixa__servicos {
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0;
 }
 
 .servicos__titulo {
@@ -378,7 +376,7 @@ html {
 }
 
 .cartao__servicos h3 {
-    justify-self: center;
+    text-align: center;
     font-weight: 700;
     font-size: var(--titulo-terciario);
 }
@@ -401,6 +399,10 @@ html {
         grid-template-rows: auto;
         gap: 30px;
         justify-content: center;
+    }
+
+    .servicos__titulo {
+        grid-column: 1;
     }
 }
 
