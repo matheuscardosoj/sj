@@ -3,10 +3,10 @@
 :root {
     --cor-cabecalho: #BBBBBB;
     --cor-cartao: #1C75BE;
-    --titulo-primario: 4rem;
-    --titulo-secundario: 2.5rem;
-    --titulo-terciario: 2rem;
-    --paragrafo: 1.6rem;
+    --titulo-primario: 40px;
+    --titulo-secundario: 25px;
+    --titulo-terciario: 20px;
+    --paragrafo: 16px;
 }
 
 html {
