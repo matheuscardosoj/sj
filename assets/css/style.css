@@ -49,6 +49,7 @@ html {
     text-decoration: none;
     color: black;
     font-weight: 700;
+    word-break: break-all;
 }
 
 .cabecalho__item a:hover {
@@ -100,25 +101,30 @@ html {
 }
 
 .conteudo {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    box-sizing: border-box;
     row-gap: 30px;
-    grid-template-columns: 400px;
 }
 
 .conteudo__info {
-    display: grid;
-    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
 }
 
 .conteudo__titulo {
     font-size: var(--titulo-terciario);
     font-weight: 700;
     padding-bottom: 5px;
+    word-wrap: break-word;
 }
 
 .conteudo__paragrafo {
     font-size: var(--paragrafo);
     text-align: justify;
+    word-break: break-all;
 }
 
 @media screen and (max-width: 940px) {
@@ -126,12 +132,10 @@ html {
         grid-template-columns: 100%;
         grid-template-rows: auto auto;
         text-align: center;
-        gap: 20px;
         box-sizing: border-box;
     }
 
     .mapa {
-        
         width: 100%;
         height: 300px;
         padding: 0 3rem;
@@ -139,18 +143,16 @@ html {
     }
 
     .conteudo {
-        width: 100%;
-        grid-template-columns: auto;
-        padding: 3rem;
+        padding: 5rem;
         box-sizing: border-box;
     }
 
-    .conteudo__info p{
-        justify-self: center;
+    .conteudo__titulo {
+        text-align: center;
     }
 
     .conteudo__info p {
-        text-align: center;
+        text-align: justify;
     }
 }
 
@@ -257,14 +259,6 @@ html {
     text-align: justify;
 }
 
-.titulo__beneficios {
-    text-align: center;
-    font-size: var(--titulo-secundario);
-    font-weight: 700;
-    text-transform: uppercase;
-    grid-column: 1 / span 3;
-}
-
 @media screen and (max-width: 940px) {
     .sobre__info {
         padding: 3rem;
@@ -284,12 +278,19 @@ html {
     margin-bottom: 5rem;
 }
 
+.titulo__beneficios {
+    text-align: center;
+    font-size: var(--titulo-secundario);
+    font-weight: 700;
+    text-transform: uppercase;
+    grid-column: 1 / span 3;
+}
+
 .cartao {
     background: white;
     display: flex;
     flex-direction: column;
     padding: 3rem;
-    height: 250px;
     border: 0.3rem solid black;
     border-radius: 1rem;
     transition: 700ms;
@@ -324,7 +325,8 @@ html {
 @media screen and (max-width: 940px) {
     .caixa__beneficios {
         width: 100%;
-        grid-template-columns: 1fr;
+        grid-template-columns: 90%;
+        grid-template-rows: auto repeat(3, 1fr);
         margin: 0 3rem;
         margin-bottom: 5rem;
     }
