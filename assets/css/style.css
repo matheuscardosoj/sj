@@ -76,10 +76,6 @@ html {
     .cabecalho__lista {
         justify-content: center;
     }
-
-    .cabecalho__item a {
-        font-size: 2rem;
-    }
 }
 
 .rodape {
