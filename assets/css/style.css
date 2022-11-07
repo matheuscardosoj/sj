@@ -3,9 +3,10 @@
 :root {
     --cor-cabecalho: #BBBBBB;
     --cor-cartao: #1C75BE;
-    --titulo-secundario: 2.5vmin;
-    --titulo-terciario: 2vmin;
-    --paragrafo: 1.6vmin;
+    --titulo-primario: 40px;
+    --titulo-secundario: 25px;
+    --titulo-terciario: 20px;
+    --paragrafo: 16px;
 }
 
 html {
@@ -57,7 +58,7 @@ html {
 
 @media screen and (max-width: 940px) {
     :root {
-        --titulo-secundario: 4vmin;
+        --titulo-secundario: 4.5vmin;
         --titulo-terciario: 3.5vmin;
         --paragrafo: 3vmin;
     }
@@ -153,7 +154,7 @@ html {
     }
 
     .conteudo__info p {
-        text-align: justify;
+        text-align: center;
     }
 }
 
@@ -171,11 +172,8 @@ html {
 }
 
 .caixa__orcamento {
-    grid-template-rows: repeat(3, auto);
     row-gap: 3rem;
     text-align: center;
-    justify-content: center;
-    align-content: center;
 }
 
 .orcamento__titulo{
@@ -191,31 +189,29 @@ html {
 }
 
 .orcamento__whatsapp {
-    display: flex;
     transition: 1s transform;
-    background: rgb(4, 219, 4);
-    border-radius: 1rem;
-    padding: 1.3rem;
-    justify-self: center;
-    transition: 700ms all;
-}
-
-.orcamento__whatsapp:hover{
-    background: rgb(7, 155, 7);
 }
 
 .orcamento__whatsapp a{
+    background: rgb(4, 219, 4);
+    padding: 1.3rem;
     color: white;
     font-weight: 700;
     text-decoration: none;
+    border-radius: 1rem;
     font-size: var(--titulo-terciario);
+    transition: 700ms all;
+}
+
+.orcamento__whatsapp a:hover{
+    background: rgb(7, 155, 7);
 }
 
 .orcamento__whatsapp img {
     width: 2rem;
     padding-right: 1rem;
     position: relative;
-    top: 1.9px;
+    top: 0.45rem;
 }
 
 @media screen and (max-width:940px) {
@@ -316,6 +312,7 @@ html {
 }
 
 .cartao__titulo{
+    text-align: center;
     padding-top: 1rem;
     padding: 0.4rem;
     font-weight: 700;
